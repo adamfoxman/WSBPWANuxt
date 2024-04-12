@@ -1,1 +1,13 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+.product-image {
+  max-width: 300px;
+  max-height: 500px;
+}
+.products-container{
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
