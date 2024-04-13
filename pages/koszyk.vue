@@ -1,10 +1,11 @@
 <script setup>
-import {getWyprzedazProducts} from "~/composable/products.js";
-const products = getWyprzedazProducts();
+import { getCartProducts } from '../../composable/productCart';
+const products = getCartProducts();
+console.log(products[0]);
 </script>
 
 <template>
-  <h3>Wyprzedaż</h3>
+  <h3>koszyk</h3>
   <div class="product">
     <section>
       <div class="products-container">
@@ -12,12 +13,15 @@ const products = getWyprzedazProducts();
           <img class="product product-image" :src="product.image" />
           <div class="mt-4">
             <h3 class="product-name">
-              <NuxtLink class="navbar-item" :to="{ path: `/product/${product.id}`, query: {type: `WYPRZEDAZ`}}">
-              {{ product.name }}
-              </NuxtLink>
+              <li>
+                  {{ product.product.name }}
+              </li>
             </h3>
             <p class="mt-1">
-              {{ product.price }} zł
+              {{ product.product.price }} zł
+            </p>
+            <p class="mt-1">
+              {{ product.size }} zł
             </p>
           </div>
         </div>
