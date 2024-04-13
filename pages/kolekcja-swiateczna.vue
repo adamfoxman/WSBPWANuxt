@@ -1,3 +1,8 @@
+<script setup>
+import { getKolekcjaSwiatecznaProducts } from '../../composable/products';
+const products = getKolekcjaSwiatecznaProducts();
+</script>
+
 <template>
   <h3>Kolekcja świąteczna</h3>
   <div class="product">
@@ -7,7 +12,9 @@
           <img class="product product-image" :src="product.image" />
           <div class="mt-4">
             <h3 class="product-name">
+              <NuxtLink class="navbar-item" :to="{ path: `/product/${product.id}`, query: {type: `KOLEKCJA_SWIATECZNA`}}">
               {{ product.name }}
+              </NuxtLink>
             </h3>
             <p class="mt-1">
               {{ product.price }} zł
@@ -18,34 +25,3 @@
     </section>
   </div>
 </template>
-
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          name: "Zimowy sweter - gdzie moje spodenki",
-          price: "269.90",
-          image: "/img/zima_0.jpg",
-        },
-        {
-          id: 2,
-          name: "Bluza rękawnik",
-          price: "399.90",
-          image: "/img/zima_1.jpg",
-        },
-        {
-          id: 3,
-          name: "Sweterek bruchomówcy",
-          price: "350",
-          image: "/img/zima_2.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>

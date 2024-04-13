@@ -1,3 +1,8 @@
+<script setup>
+import { getJesienZimaProducts, ProductType } from '../../composable/products';
+const products = getJesienZimaProducts();
+</script>
+
 <template>
   <h3>Jesień zima</h3>
   <div class="product">
@@ -8,7 +13,7 @@
             <div class="mt-4">
               <h3 class="product-name">
                 <li>
-                <NuxtLink class="navbar-item" to="/product">
+                <NuxtLink class="navbar-item" :to="{ path: `/product/${product.id}`, query: {type: `JESIEN_ZIMA`}}">
                 {{ product.name }}
                 </NuxtLink>
                 </li>
@@ -22,34 +27,3 @@
     </section>
   </div>
 </template>
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          name: "Bluzka",
-          price: "469.99",
-          image: "/img/jesienzima_0.jpg",
-        },
-        {
-          id: 2,
-          name: "Sweter",
-          price: "399.99",
-          image: "/img/jesienzima_1.jpg",
-        },
-        {
-          id: 3,
-          name: "Sweter",
-          price: "359.99",
-          image: "/img/jesienzima_2.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>
-

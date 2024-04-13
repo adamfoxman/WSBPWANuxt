@@ -1,3 +1,8 @@
+<script setup>
+import {getWyprzedazProducts} from "~/composable/products.js";
+const products = getWyprzedazProducts();
+</script>
+
 <template>
   <h3>Wyprzedaż</h3>
   <div class="product">
@@ -7,7 +12,9 @@
           <img class="product product-image" :src="product.image" />
           <div class="mt-4">
             <h3 class="product-name">
+              <NuxtLink class="navbar-item" :to="{ path: `/product/${product.id}`, query: {type: `WYPRZEDAZ`}}">
               {{ product.name }}
+              </NuxtLink>
             </h3>
             <p class="mt-1">
               {{ product.price }} zł
@@ -18,33 +25,3 @@
     </section>
   </div>
 </template>
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          name: "Zestaw",
-          price: "134.90",
-          image: "/img/wyprzedaz_0.jpg",
-        },
-        {
-          id: 2,
-          name: "Kurtka",
-          price: "129.90",
-          image: "/img/wyprzedaz_1.jpg",
-        },
-        {
-          id: 3,
-          name: "Żółta bluzka",
-          price: "49.99",
-          image: "/img/wyprzedaz_2.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>

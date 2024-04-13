@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <img class="product product-image" :src="product.image" />
+    <img class="product product-image" :src="product.image"/>
     <div>
       <h1>{{ product.name }}</h1>
       <p>{{ product.price }}</p>
@@ -21,33 +21,14 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
+import {getProductsByType} from '../../composable/products.js';
 
-const products = [
-      {
-        id: 1,
-        name: "Bluzka",
-        price: "469.99",
-        image: "/img/jesienzima_0.jpg",
-        description: "Fajen bluzka",
-      },
-      {
-        id: 2,
-        name: "Sweter",
-        price: "399.99",
-        image: "/img/jesienzima_1.jpg",
-        description: "Fajen Sweter",
-      },
-      {
-        id: 3,
-        name: "Sweter",
-        price: "359.99",
-        image: "/img/jesienzima_2.jpg",
-        description: "Fajen Sweter",
-      },
-    ];
-const product = products[0]
+const route = useRoute();
+const products = getProductsByType(route.query.type);
+console.log(route.query.type);
+const productId = parseInt(route.params.id);
+const product = products[productId- 1]
 </script>
 
 <style scoped>
