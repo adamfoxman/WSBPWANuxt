@@ -6,14 +6,14 @@
       <p>{{ product.price }}</p>
       <div class="size-selection">
         <h2>Wybierz rozmiar</h2>
-        <select name="size">
+        <select onchange="onChange(this.value)" name="size">
           <option value="S">S</option>
           <option value="M">M</option>
           <option value="L">L</option>
           <option value="XL">XL</option>
         </select>
       </div>
-      <button class ="button-card ">Dodaj do koszyka</button>
+      <button @click="addCartProduct(product, productSize)" class ="button-card " >Dodaj do koszyka</button>
       <button class="button-qa">Zapytaj o produkt</button>
       <h2>Opis produktu: </h2>
       <p>{{ product.description }}</p>
@@ -23,9 +23,16 @@
 
 <script setup lang="ts">
 import {getProductsByType} from '../../composable/products.js';
+import {addCartProduct, getCartProducts} from "~/composable/productCart";
+
+let productSize = "S";
+function onChange(value) {
+  productSize = value;
+}
 
 const route = useRoute();
-const products = getProductsByType(route.query.type);
+const productType = route.query.type;
+const products = getProductsByType(productType);
 console.log(route.query.type);
 const productId = parseInt(route.params.id);
 const product = products[productId- 1]

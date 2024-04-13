@@ -1,5 +1,5 @@
 <script setup>
-import { getJesienZimaProducts, ProductType } from '../../composable/products';
+import { getJesienZimaProducts } from '../../composable/products';
 const products = getJesienZimaProducts();
 </script>
 
