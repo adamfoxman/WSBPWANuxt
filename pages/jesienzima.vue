@@ -7,7 +7,11 @@
             <img class="product product-image" :src="product.image" />
             <div class="mt-4">
               <h3 class="product-name">
+                <li>
+                <NuxtLink class="navbar-item" to="/product">
                 {{ product.name }}
+                </NuxtLink>
+                </li>
               </h3>
               <p class="mt-1">
                 {{ product.price }} zł
