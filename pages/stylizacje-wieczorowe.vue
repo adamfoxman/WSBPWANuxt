@@ -1,3 +1,8 @@
+<script setup>
+import {getStylizacjeWieczoroweProducts} from "~/composable/products.js";
+const products = getStylizacjeWieczoroweProducts();
+</script>
+
 <template>
   <h3>Stylizacje wieczorowe</h3>
   <div class="product">
@@ -7,7 +12,9 @@
           <img class="product product-image" :src="product.image" />
           <div class="mt-4">
             <h3 class="product-name">
+              <NuxtLink class="navbar-item" :to="{ path: `/product/${product.id}`, query: {type: `STYLIZACJE_WIECZOROWE`}}">
               {{ product.name }}
+              </NuxtLink>
             </h3>
             <p class="mt-1">
               {{ product.price }} zł
@@ -17,34 +24,4 @@
       </div>
     </section>
   </div>
-</template>>
-
-<script>
-export default {
-  name: "App",
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          name: "Deborash 24",
-          price: "1469.90",
-          image: "/img/wieczor_0.jpg",
-        },
-        {
-          id: 2,
-          name: "Ciuszek 14",
-          price: "399.90",
-          image: "/img/wieczor_1.jpg",
-        },
-        {
-          id: 3,
-          name: "Strój wieczorowy",
-          price: "759.90",
-          image: "/img/wieczor_2.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>
+</template>

@@ -39,6 +39,11 @@ const showMobileMenu = () => {
               WYPRZEDAŻ
             </NuxtLink>
           </li>
+          <li>
+            <NuxtLink class="navbar-item" to="/koszyk">
+              KOSZYK
+            </NuxtLink>
+          </li>
         </ul>
       </div>
     </div>
