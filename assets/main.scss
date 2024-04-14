@@ -5,3 +5,16 @@ $fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
 @import '../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
 @import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
 @import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+.product-image {
+  max-width: 300px;
+  max-height: 500px;
+}
+
+.products-container {
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}

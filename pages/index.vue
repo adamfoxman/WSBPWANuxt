@@ -10,7 +10,7 @@ const showHideModal = () => {
 </script>
 
 <template>
-  <div class="main">
+  <div class="main-page">
     <div class="menu">
       <Button @click="showHideModal">
         <span class="icon">
@@ -18,18 +18,14 @@ const showHideModal = () => {
         </span>
       </Button>
     </div>
+    <Modal v-if="showModal" @closeModal="showHideModal"/>
+    <MainBestsellers/>
+    <MainNewsletter></MainNewsletter>
   </div>
-  <Modal v-if="showModal" @closeModal="showHideModal"/>
 </template>
 
-<style scoped lang="scss">
-.main {
-  display: flex;
-  flex-direction: column;
-
-  .menu {
-    margin-left: auto;
-    padding: 1%;
-  }
+<style scoped>
+.main-page {
+  color: red;
 }
 </style>
