@@ -16,9 +16,9 @@
         <div class="column">
           <h3 class="title is-4">Informacje</h3>
           <ul>
-            <li><a href="/regulamin">Regulamin</a></li>
-            <li><a href="/dostawa">Dostawa</a></li>
-            <li><a href="/o-nas">O nas</a></li>
+            <li><a href="/info/regulamin">Regulamin</a></li>
+            <li><a href="/info/dostawa">Dostawa</a></li>
+            <li><a href="/info/o-nas">O nas</a></li>
           </ul>
         </div>
         <div class="column">

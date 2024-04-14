@@ -5,19 +5,22 @@
         </span>
         <div class="columns is-multiline">
             <div v-for="product in products" :key="product.id" class="column is-half">
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img :src="product.image" alt="Product Image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <p class="card-title is-4">{{ product.name }}</p>
-                            <p class="card-subtitle is-6">{{ product.price }}</p>
+                <nuxt-link :to="product.link">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img :src="product.image" alt="Product Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="card-title is-4">{{ product.name }}</p>
+                                <p class="card-subtitle is-6">{{ product.price }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </nuxt-link>
+
             </div>
         </div>
     </div>
@@ -31,20 +34,23 @@ export default {
                 {
                     id: 1,
                     name: "Bluzka jedwabna",
-                    price: "$10",
-                    image: "img/codzienna_0.jpg"
+                    price: "69.99 zł",
+                    image: "img/codzienna_0.jpg",
+                    link: "/product/3?type=STYLIZACJE_CODZIENNE"
                 },
                 {
                     id: 2,
                     name: "Sweterek świąteczny",
                     price: "$20",
-                    image: "/img/zima_2.jpg"
+                    image: "/img/zima_2.jpg",
+                    link: "/product/1?type=KOLEKCJA_SWIATECZNA"
                 },
                 {
                     id: 3,
                     name: "Top wieczorowy",
                     price: "$30",
-                    image: "/img/wieczor_1.jpg"
+                    image: "/img/wieczor_1.jpg",
+                    link: "/product/2?type=STYLIZACJE_WIECZOROWE"
                 }
             ]
         };
