@@ -1,7 +1,7 @@
 <template>
     <div class="main-page">
-        <h1 class="h1">Welcome to the Main Page!</h1>
-        <p>This is the main page component of your Vue.js application.</p>
+        <MainBestsellers />
+        <MainNewsletter></MainNewsletter>
     </div>
 </template>
 

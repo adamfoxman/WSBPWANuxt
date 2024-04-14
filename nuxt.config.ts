@@ -7,4 +7,8 @@ export default defineNuxtConfig({
     "@": resolve(__dirname, "/"),
   },
   css: ["~/assets/css/main.scss"],
+  plugins: [{ src: "~/plugins/vue-unicons", ssr: false, mode: "client" }],
+  colorMode: {
+    preference: "light",
+  },
 });

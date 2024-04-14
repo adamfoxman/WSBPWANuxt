@@ -1,13 +1,16 @@
 <template>
     <div class="info">
-        <span>
-            <font-awesome-icon :icon="icon" />
+        <span class="icon">
+            <i :class="'uil uil-' + icon"></i>
         </span>
         <span>{{ content }}</span>
     </div>
 </template>
 
 <script setup lang="ts">
+import { defineProps } from 'vue'
+import Unicon from 'vue-unicons'
+
 defineProps({
     icon: {
         type: String,
@@ -27,14 +30,18 @@ defineProps({
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #0f0f0f;
     padding: 10px;
     width: 100%;
     height: 44px;
-    color: #000;
+    color: #fff;
 
     span {
         margin-right: 10px;
+
+        i {
+            color: white;
+        }
     }
 }
 </style>

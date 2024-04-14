@@ -7,16 +7,11 @@ const showMobileMenu = () => {
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a role="button"
-         class="navbar-burger"
-         aria-label="menu"
-         aria-expanded="false"
-         data-target="navbarBasicExample"
-         @click="showMobileMenu"
-      >
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+        @click="showMobileMenu">
       </a>
     </div>
-    <div id="navbarBasicExample" :class="{'navbar-menu': !mobileMenu}">
+    <div id="navbarBasicExample" :class="{ 'navbar-menu': !mobileMenu }">
       <div class="navbar-start">
         <ul>
           <li>
@@ -55,10 +50,10 @@ const showMobileMenu = () => {
   margin-left: auto;
   margin-right: auto;
   max-width: 1140px;
-  padding-left:40px;
-  padding-right:40px;
-  padding-bottom:40px;
-  background:#fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background: #fff;
 }
 
 .navbar-item {
@@ -67,8 +62,12 @@ const showMobileMenu = () => {
   font-weight: 300;
   color: #000;
   padding: 12px 0 25px;
-  font-family: 'Merriweather',serif;
+  font-family: 'Merriweather', serif;
   margin: 0 15px;
+}
+
+.navbar-item:hover {
+  color: #fff;
 }
 
 ul {
@@ -78,5 +77,4 @@ ul {
   grid-auto-flow: column;
   grid-gap: 10px;
 }
-
 </style>
