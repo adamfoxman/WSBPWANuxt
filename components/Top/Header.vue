@@ -1,7 +1,9 @@
 <template>
     <div class="first-row">
         <div class="logo">
-            <img src="/img/logo.png" alt="logo" height="150px" width="300px" />
+            <nuxt-link to="/">
+                <img src="/img/logo.png" alt="logo" height="150px" width="300px" />
+            </nuxt-link>
         </div>
         <div class="buttons">
             <span class="icon">
@@ -16,8 +18,6 @@
 </template>
 
 <script lang="ts">
-import { Unicon } from 'vue-unicons'
-
 
 </script>
 
