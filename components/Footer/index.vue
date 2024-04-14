@@ -1,11 +1,32 @@
 <template>
   <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-4">Kategorie</h3>
+          <ul>
+            <li><a href="/jesienzima">Jesień/Zima</a></li>
+            <li><a href="/wyprzedaz">Wyprzedaż</a></li>
+            <li><a href="/stylizacje-wieczorowe">Stylizacje wieczorowe</a></li>
+            <li><a href="/stylizacje-codzienne">Stylizacje codzienne</a></li>
+            <li><a href="/kolekcja-swiateczna">Kolekcja świąteczna</a></li>
+            <li><a href="/koszyk">Koszyk</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3 class="title is-4">Informacje</h3>
+          <ul>
+            <li><a href="/regulamin">Regulamin</a></li>
+            <li><a href="/dostawa">Dostawa</a></li>
+            <li><a href="/o-nas">O nas</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3 class="title is-4">O nas</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo nec nunc tincidunt lacinia. Nulla
+            facilisi. Sed id semper nunc.</p>
+        </div>
+      </div>
     </div>
   </footer>
 </template>

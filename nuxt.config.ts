@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {resolve} from "path";
+import { resolve } from "path";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  alias: {"@": resolve(__dirname, '/')},
-  css: ["~/assets/main.scss"]
-})
+  alias: {
+    "@": resolve(__dirname, "/"),
+  },
+  css: ["~/assets/css/main.scss"],
+  plugins: [{ src: "~/plugins/vue-unicons", ssr: false, mode: "client" }],
+  colorMode: {
+    preference: "light",
+  },
+});

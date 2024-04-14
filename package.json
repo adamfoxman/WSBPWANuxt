@@ -13,7 +13,8 @@
     "bulma": "^1.0.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-unicons": "^3.3.1"
   },
   "devDependencies": {
     "sass": "^1.74.1"
