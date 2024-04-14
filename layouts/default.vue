@@ -1,12 +1,12 @@
 <template>
   <div class="main-page">
     <TopInfo icon="info-circle"
-      content="Dostawy mogą być obecnie opóźnione o 21 do 37 dni. Przepraszamy za utrudnienia." />
+             content="Dostawy mogą być obecnie opóźnione o 21 do 37 dni. Przepraszamy za utrudnienia."/>
     <TopHeader>
     </TopHeader>
     <TopNav></TopNav>
-    <slot />
-    <Footer />
+    <slot/>
+    <Footer/>
   </div>
 </template>
 

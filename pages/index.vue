@@ -1,29 +1,31 @@
-<template>
-    <div class="main-page">
-        <MainBestsellers />
-        <MainNewsletter></MainNewsletter>
-    </div>
-</template>
+<script setup lang="ts">
+import {ref} from 'vue';
 
-<script>
-export default {
-    name: 'MainPage',
-    data() {
-        return {
-            // Add your data properties here
-        }
-    },
-    methods: {
-        // Add your methods here
-    },
-    mounted() {
-        // Add any initialization logic here
-    }
-}
+const showModal = ref(false);
+
+const showHideModal = () => {
+  showModal.value = !showModal.value;
+};
+
 </script>
+
+<template>
+  <div class="main-page">
+    <div class="menu">
+      <Button @click="showHideModal">
+        <span class="icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+      </Button>
+    </div>
+    <Modal v-if="showModal" @closeModal="showHideModal"/>
+    <MainBestsellers/>
+    <MainNewsletter></MainNewsletter>
+  </div>
+</template>
 
 <style scoped>
 .main-page {
-    color: red;
+  color: red;
 }
 </style>

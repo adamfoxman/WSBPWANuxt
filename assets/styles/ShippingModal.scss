@@ -1,0 +1,91 @@
+.modal {
+  display: flex;
+  justify-content: flex-start;
+
+  .modal-card {
+    margin-right: 0;
+    max-width: 550px;
+    max-height: 100vh;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .modal-card-head {
+    background-color: white;
+    border: none;
+
+    .modal-card-title {
+      font-size: medium;
+    }
+
+    .button-close {
+      border: none;
+      margin-left: auto;
+    }
+  }
+
+  .modal-card-body {
+    display: flex;
+    flex-direction: column;
+
+    .products {
+      display: flex;
+      min-width: 75%;
+      height: 150px;
+      align-items: center;
+    }
+  }
+
+  .product-number {
+    display: flex;
+    border: 1px solid lightgray;
+    color: lightgray;
+    align-items: center;
+    justify-content: center;
+    max-width: 50px;
+    min-height: 40px;
+    margin-bottom: 10%;
+  }
+
+  .contents {
+    display: flex;
+    align-items: center;
+
+    .button-close {
+      border: none;
+      margin-left: auto;
+    }
+  }
+
+  .summary {
+    width: 100%;
+  }
+
+  .sum-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .sum {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tax {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid gray 1px;
+    margin-top: 30px;
+  }
+
+  .total {
+    margin-top: 20px;
+
+    .total-price {
+      font-size: x-large;
+    }
+  }
+}

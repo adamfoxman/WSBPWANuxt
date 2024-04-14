@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sukienka Kopertowa Zielona",
+      "price": 312.13,
+      "image": "Product.jpg",
+      "quantity": 2,
+      "size": "36",
+      "productId": "60-4980 36"
+    },
+    {
+      "id": 2,
+      "name": "Spodnie Lniane Niebieskie",
+      "price": 219.44,
+      "image": "product2.jpg",
+      "quantity": 1,
+      "size": "40",
+      "productId": "60-5051 40"
+    }
+  ],
+  "deliveryMethods": [
+    {
+      "id": 1,
+      "name": "Kurier",
+      "price": 20
+    },
+    {
+      "id": 2,
+      "name": "Kurier - płatność przy odbiorze",
+      "price": 25
+    },
+    {
+      "id": 3,
+      "name": "Kurier DPD - przedpłata",
+      "price": 20
+    },
+    {
+      "id": 4,
+      "name": "Kurier DPD - za pobraniem",
+      "price": 25
+    }
+  ],
+  "discounts": [
+    {
+      "id": 1,
+      "code": "PROMO20OFF",
+      "amount": 20
+    }
+  ]
+}
